@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Budget_By_Methods__c</fullName>
+    <description>The method by which the project is budgeted.</description>
+    <externalId>false</externalId>
+    <label>Project Budget By Methods</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Project_Budget_By_Methods</valueSetName>
+    </valueSet>
+</CustomField>

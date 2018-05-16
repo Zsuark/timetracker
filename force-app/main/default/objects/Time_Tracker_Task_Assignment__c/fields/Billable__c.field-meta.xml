@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billable__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Whether the task assignment is billable or not. For example: if set to true, all time tracked on this project for the associated task will be marked as billable.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Whether the task assignment is billable or not. For example: if set to true, all time tracked on this project for the associated task will be marked as billable.</inlineHelpText>
+    <label>Billable</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

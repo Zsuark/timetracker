@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ID_Harvest__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>External ID for Harvest.
+
+Stored as text but must be an integer value</description>
+    <externalId>true</externalId>
+    <label>Harvest ID</label>
+    <length>12</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

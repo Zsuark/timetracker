@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Started_Time__c</fullName>
+    <description>Time the time entry was started (if tracking by start/end times).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Time the time entry was started (if tracking by start/end times).</inlineHelpText>
+    <label>Started Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Time</type>
+</CustomField>

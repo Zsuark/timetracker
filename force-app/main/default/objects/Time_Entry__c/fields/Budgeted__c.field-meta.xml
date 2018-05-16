@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budgeted__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Whether or not the time entry counts towards the project budget.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Whether or not the time entry counts towards the project budget.</inlineHelpText>
+    <label>Budgeted</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

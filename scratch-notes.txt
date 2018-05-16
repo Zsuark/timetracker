@@ -1,0 +1,87 @@
+IDs in Harvest are marked as "Integer" - however JSON doesn't clearly define what an integer is (beyond a whole number).
+
+https://stackoverflow.com/questions/13502398/json-integers-limit-on-size
+
+It looks like the defacto definition is -(2^53 + 1) to 2^53 + 1
+
+
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_primitives.htm
+
+Integer in SF is -(2^31 + 1) through to 2^31 - 1
+This should be enough, but we cannot be sure!
+Harvest API doesn't define an Integer value!
+
+Long is a better choice: -(2^63 + 1) through to 2^63 - 1
+
+But SF Objects use "Number" or "Text"
+
+With number formatting, may be best to use text and control input to it
+
+No, we can use Number with 18 digits and 0 decimal places - more than enough
+
+
+On Harvest ID entries:
+
+Listed as Integer by Harvest API v2
+
+Should be Number(18,0)
+
+---
+
+
+Consideration for enabling audit fields - https://help.salesforce.com/articleView?id=Considerations-before-having-Create-Audit-Fields-enabled&language=en_US&type=1
+
+Permissions Required to set Audit Fields: "Modify All Data"
+
+- Use a permission set to contain the data import user permissions
+
+----
+
+
+Task in app and Harvest is called "Time Tracker Task"
+
+NOTE: I did not map to the Standard SF "Task" object. The behaviour of this object is different to the specifications as well as Harvest's view of a Task. So, I have called the custom object in SalesForce a "Time Tracker Task"
+
+====
+
+**** Missing: External Reference from Time Entry object
+
+external_reference   object   An object containing the id, group_id, permalink, service, and service_icon_url of the associated external reference.
+
+https://www.getharvest.com/blog/2015/11/be-transparent-and-accurate-when-tracking-time-in-other-apps/
+
+
+
+====
+
+**** Missing: Invoice from Time Entry object
+
+external_reference   object   An object containing the id, group_id, permalink, service, and service_icon_url of the associated external reference.
+
+https://www.getharvest.com/blog/2015/11/be-transparent-and-accurate-when-tracking-time-in-other-apps/
+
+invoice   object   Once the time entry has been invoiced, this field will include the associated invoice’s id and number.
+
+=
+
+BETA field warning
+
+Time Custom Field (Beta)
+
+Started Time and Ended Time on the Time Entry object is a Time custom field.
+
+NOTE: This is a new object field type and is still marked as BETA.
+
+
+====
+
+Created At and Updated At field
+
+Many of the Harvest API data models include "Created At" and "Updated At" fields, these relate to the SF admin fields. They may be populated by Data Loading.
+
+ACCOUNT AND CONTACT (Harvest: Clients and Client Contacts)
+
+However, on the Account and contact standard SF Objects I have included them as separate fields.
+
+Discussion needed if these should use the SF Admin fields or not.
+

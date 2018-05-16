@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Budget_includes_Expenses__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Option for budget of Total Project Fees projects to include tracked expenses.</description>
+    <externalId>false</externalId>
+    <label>Cost Budget includes Expenses</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify_when_over_Budget__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Whether project managers should be notified when the project goes over budget.</description>
+    <externalId>false</externalId>
+    <label>Notify when over Budget</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
