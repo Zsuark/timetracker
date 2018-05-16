@@ -8,6 +8,7 @@
     <formFactors>Large</formFactors>
     <label>TimeTracker</label>
     <navType>Standard</navType>
+    <tabs>Project__c</tabs>
     <tabs>Time_Entry__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>TimeTracker_UtilityBar</utilityBar>

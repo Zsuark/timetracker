@@ -4,6 +4,7 @@
         <application>TimeTracker</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <description>Permission Set for the TimeTracker Application</description>
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.Address_Harvest__c</field>
@@ -13,11 +14,6 @@
         <editable>false</editable>
         <field>Account.Created_At_Harvest__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account.Currency_Harvest__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -33,11 +29,6 @@
         <editable>false</editable>
         <field>Account.Industry</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account.Is_Active_Harvest__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -280,7 +271,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>TimeTracker User Permission Set</label>
+    <label>TimeTracker User</label>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>

@@ -154,3 +154,14 @@ Time Entry
 Time Tracker Task
 Time Tracker Task Assignment
 
+TODO: REMOVE ALL CHANGES TO CONTACTS - NOT NEEDED
+
+=====
+
+IMPORTANT NOTE: UNUSED HARVEST FIELDS
+
+I do not need to include all harvest fields, but as many as possible would be good.
+
+E.g. Update a contact
+
+Updates the specific contact by setting the values of the parameters passed. Any parameters not provided will be left unchanged. Returns a contact object and a 200 OK response code if the call succeeded.

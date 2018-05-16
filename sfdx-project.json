@@ -6,6 +6,6 @@
     }
   ],
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "data-force-6165-dev-ed.lightning.force.com",
   "sourceApiVersion": "42.0"
 }
