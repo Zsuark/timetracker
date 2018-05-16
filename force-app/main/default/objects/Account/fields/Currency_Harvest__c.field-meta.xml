@@ -4,7 +4,7 @@
     <description>3 letter currency code.
 External field for Harvest</description>
     <externalId>false</externalId>
-    <label>Currency</label>
+    <label>Currency (Harvest)</label>
     <length>3</length>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

@@ -3,7 +3,7 @@
     <fullName>Address_Harvest__c</fullName>
     <description>Address string for Harvest external system</description>
     <externalId>false</externalId>
-    <label>Harvest Address</label>
+    <label>Address (Harvest)</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>
     <type>LongTextArea</type>

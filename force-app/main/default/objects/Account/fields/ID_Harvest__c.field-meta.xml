@@ -5,7 +5,7 @@
 
 Listed as Integer by Harvest API v2</description>
     <externalId>false</externalId>
-    <label>Harvest ID</label>
+    <label>ID (Harvest)</label>
     <precision>18</precision>
     <required>false</required>
     <scale>0</scale>

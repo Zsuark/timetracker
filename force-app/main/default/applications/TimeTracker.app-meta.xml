@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>TimeTracker Application for Blackthorn by Raphael Krausz</description>
+    <formFactors>Large</formFactors>
+    <label>TimeTracker</label>
+    <navType>Standard</navType>
+    <tabs>Time_Entry__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>TimeTracker_UtilityBar</utilityBar>
+</CustomApplication>

@@ -3,7 +3,7 @@
     <fullName>Created_At_Harvest__c</fullName>
     <description>Date and time the client was created on the Harvest external system</description>
     <externalId>false</externalId>
-    <label>Harvest Create Date</label>
+    <label>Created Date (Harvest)</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <type>DateTime</type>

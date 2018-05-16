@@ -45,6 +45,10 @@
                 <behavior>Edit</behavior>
                 <field>Updated_At_Harvest__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Active_Harvest__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

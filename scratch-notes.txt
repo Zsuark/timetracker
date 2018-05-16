@@ -85,3 +85,72 @@ However, on the Account and contact standard SF Objects I have included them as 
 
 Discussion needed if these should use the SF Admin fields or not.
 
+====
+
+OAuth credentials for TimeTracker App
+
+See: ../credentials/TimeTrackerCredentials.txt
+
+
+===
+
+TODO: Review customised field lists. Do we need to put in any validation rules, etc or any modifications for this project to be complete for testing?
+
+TODO: Ensure API is covered off enough for a 1:1 mapping to Harvest API
+TODO: Check the Harvest applicable methods associated with each object to ensure 1:1 mappings work.
+TODO: Check Record Names for custom objects - review and make sure they are good
+
+TODO: Integration (CI) and Unit Testing - "Architect it with the the understanding that this app will be 50 times bigger in functionality (if development had continued)"
+FINISH: https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci/units/sfdx_travis_ci_connected_app
+
+===
+
+Scratch org permission sets
+
+Use these to generate app permissions
+
+Account - default + fax + Harvest fields
+
+====
+
+Generate Scratch Org users for testing
+
+- These users will only be used for testing
+- Not present in production orgs
+
+Develop normally, but ensure all unit testing and integration testing (Travis CI) is entered for submission.
+
+BEWARE:
+
+The current permission set gives read access to all Project fields. Need to programatically enforce security over record access.
+
+
+WARNING - READ LEVEL FIELD ACCESS GRANTED
+
+
+====
+
+
+NOTE FOR REVIEWER
+
+I have used a de-facto naming convention of <field name>-<external api>
+where "external api" mean the name or abbreviation for external data model.
+
+The Harvest API v2 data model is labelled as "Harvest"
+
+E.g. the Harvest ID field gets named: ID_Harvest
+
+E.g. Other Field: Other_Field_Harvest
+---
+
+===
+
+Current objects handled:
+
+Account
+Contact
+Project
+Time Entry
+Time Tracker Task
+Time Tracker Task Assignment
+
