@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Time &amp; Materials</fullName>
+        <fullName>Project</fullName>
         <default>true</default>
-        <label>Time &amp; Materials</label>
+        <label>Project</label>
     </customValue>
     <customValue>
-        <fullName>Fixed Fee</fullName>
+        <fullName>Tasks</fullName>
         <default>false</default>
-        <label>Fixed Fee</label>
+        <label>Tasks</label>
     </customValue>
     <customValue>
-        <fullName>Non-Billable</fullName>
+        <fullName>People</fullName>
         <default>false</default>
-        <label>Non-Billable</label>
+        <label>People</label>
     </customValue>
-    <description>? Maps to Project Type in Introductory documentation  ?</description>
+    <customValue>
+        <fullName>none</fullName>
+        <default>false</default>
+        <label>none</label>
+    </customValue>
     <masterLabel>Project Bill By Methods</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

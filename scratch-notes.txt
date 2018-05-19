@@ -180,8 +180,10 @@ Updates the specific contact by setting the values of the parameters passed. Any
 
 Bill_by on a Project:
 
+Project
 Tasks
 People
+none
 
 Budget by on a Project:
 
@@ -189,6 +191,14 @@ task
 task_fee
 person
 
+The method by which the project is budgeted.
+Options:
+project (Hours Per Project)
+project_cost (Total Project Fees)
+task (Hours Per Task)
+task_fees (Fees Per Task)
+person (Hours Per Person)
+none (No Budget)
 
 ====
 
@@ -235,3 +245,10 @@ FROM Time_Entry__c
 
 SELECT Id, Name, Client__c
 FROM Project__c
+
+
+===
+
+TESTING NOTES
+
+We make 1 client per project

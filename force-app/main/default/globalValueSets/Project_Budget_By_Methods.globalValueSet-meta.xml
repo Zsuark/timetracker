@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Total project hours</fullName>
-        <default>false</default>
-        <label>Total project hours</label>
+        <fullName>project</fullName>
+        <default>true</default>
+        <label>Project</label>
     </customValue>
     <customValue>
-        <fullName>Hours per person</fullName>
+        <fullName>project_cost</fullName>
         <default>false</default>
-        <label>Hours per person</label>
+        <label>Project cost</label>
     </customValue>
     <customValue>
-        <fullName>Hours per task</fullName>
+        <fullName>task</fullName>
         <default>false</default>
-        <label>Hours per task</label>
+        <label>Task</label>
     </customValue>
     <customValue>
-        <fullName>Total project fees</fullName>
+        <fullName>task_fees</fullName>
         <default>false</default>
-        <label>Total project fees</label>
+        <label>Task fees</label>
     </customValue>
     <customValue>
-        <fullName>Fees per task</fullName>
+        <fullName>person</fullName>
         <default>false</default>
-        <label>Fees per task</label>
+        <label>Person</label>
+    </customValue>
+    <customValue>
+        <fullName>none</fullName>
+        <default>false</default>
+        <label>None</label>
     </customValue>
     <masterLabel>Project Budget By Methods</masterLabel>
     <sorted>false</sorted>

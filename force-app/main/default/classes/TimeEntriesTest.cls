@@ -13,12 +13,34 @@ private class TimeEntriesTest {
   */
 
 
+  /**
+   * Checking that our test data factory is working correctly for Projects
+   */
+  @isTest static void testProjectCreation() {
+    List<Project__c> projectList = TimeEntriesTestDataFactory.createProjectsAndClients(2);
+
+    System.assertEquals(2, projectList.size());
+
+    System.assertEquals('TestProjectForTestClient1', projectList[0].Name);
+    System.assertEquals('TestProjectForTestClient2', projectList[1].Name);
+
+    List<Account> clients = [
+    SELECT Name
+    FROM Account
+    ORDER BY Name];
+
+    System.assertEquals(2, clients.size());
+    System.assertEquals('TestClient1', clients[0].Name);
+    System.assertEquals('TestClient2', clients[1].Name);
+
+
+  }
 
 }
 
 
 
-  /**
+  /*
    * Apply Defaults to Time Entries
    *
    * Auto-populated data on create and update
@@ -31,7 +53,7 @@ private class TimeEntriesTest {
    */
 
 
-  /**
+  /*
    * Validate new Time Entries
    *
    * Ensure we have the right data
