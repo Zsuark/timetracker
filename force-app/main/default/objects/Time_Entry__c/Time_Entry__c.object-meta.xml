@@ -54,8 +54,9 @@
     <enableStreamingApi>true</enableStreamingApi>
     <label>Time Entry</label>
     <nameField>
+        <displayFormat>TE-{00000}</displayFormat>
         <label>Time Entry Name</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Time Entries</pluralLabel>
     <searchLayouts/>

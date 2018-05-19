@@ -172,3 +172,66 @@ I do not need to include all harvest fields, but as many as possible would be go
 E.g. Update a contact
 
 Updates the specific contact by setting the values of the parameters passed. Any parameters not provided will be left unchanged. Returns a contact object and a 200 OK response code if the call succeeded.
+
+
+
+====
+
+
+Bill_by on a Project:
+
+Tasks
+People
+
+Budget by on a Project:
+
+task
+task_fee
+person
+
+
+====
+
+NOTE: CREATING TRIGGERS
+
+When I created a trigger in the org a `sfdx force:source:pull` there are no changes pulled from the scratch org to the local directory.
+
+However, when the trigger already exists in the scratch org, and I `sfdx force:source:push` it to the scratch org from the local directory, it does so without error or warning. The corresponding trigger in the scratch org is overwritten by the local version.
+
+
+Best practice:
+
+In SFDX and local editing with VCS (Versioning Control Version e.g. `git`) use:
+
+`sfdx force:apex:triggers:create -n myGreatTriggerName -d force-app/main/default/triggers`
+
+Other elements also:
+TODO: more sfdx force:apex examples
+
+
+
+When creating Apex code, use sfdx cli commands
+
+Hmmm... sometimes even the classes created with sfdx aren't picked up :/
+
+====
+
+Time Entry:
+
+NOT Matching field: timer_started_at
+Field if only needed if tracking by duration.
+
+Leaving it on the object, but ignoring it for now. Our time sheet entries are filled out with start and end times.
+
+
+NOTE: A time entry cannot span multiple days.
+I think this is a limitation on the Harvest system too
+
+
+====
+
+SELECT ID, Project__c, Project__r.Client__c, Client__c, User__c, User__r.Name, Spent_Date__c
+FROM Time_Entry__c
+
+SELECT Id, Name, Client__c
+FROM Project__c

@@ -43,24 +43,24 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Project tasks for TimeTracker application</description>
+    <description>Assign Tasks to a Project</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Task</label>
+    <label>Project Task Assignment</label>
     <nameField>
-        <displayFormat>TTT-{00000}</displayFormat>
-        <label>Task Record Name</label>
+        <displayFormat>PTTTA-{00000}</displayFormat>
+        <label>Record Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Tasks</pluralLabel>
+    <pluralLabel>Project Task Assignments</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -43,23 +43,24 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Time Tracker Task Assignments</description>
-    <enableActivities>false</enableActivities>
+    <description>Assigns user to a Project.</description>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
-    <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Time Tracker Task Assignment</label>
+    <label>Project User Assignment</label>
     <nameField>
-        <label>Time Tracker Task Assignment Name</label>
-        <type>Text</type>
+        <displayFormat>PUA-{0000}</displayFormat>
+        <label>Project User Assignment Name</label>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Time Tracker Task Assignments</pluralLabel>
+    <pluralLabel>Project User Assignments</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

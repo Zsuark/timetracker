@@ -6,6 +6,15 @@
     <externalId>false</externalId>
     <inlineHelpText>An object containing the id and name of the associated project.</inlineHelpText>
     <label>Project</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Project__c.Is_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Project__c</referenceTo>
     <relationshipLabel>Time Entries</relationshipLabel>
     <relationshipName>Time_Entries</relationshipName>
