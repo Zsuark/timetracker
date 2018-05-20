@@ -63,10 +63,8 @@ private class TimeEntriesTest {
       System.assert(userIdSet.contains(psa.AssigneeId));
     }
 
-
-
-
   }
+
 
   /**
    * Checking that our test data factory is working correctly for Projects
@@ -90,6 +88,8 @@ private class TimeEntriesTest {
 
 
   }
+
+
 
 
 
