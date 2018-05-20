@@ -1,6 +1,5 @@
 /**
- * TimeEntriesTest contains the tests for the domain layer
- * of the
+ * Tests the domain layer of TimeEntries
  *
  * @author Raphael Krausz
  * @date   2018-05-19
