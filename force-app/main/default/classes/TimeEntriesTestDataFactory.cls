@@ -15,7 +15,55 @@ public class TimeEntriesTestDataFactory {
 
   // TODO: Should this be moved to UserTestDataFactory?
   /**
+   * Creates test users for testing
+   * TODO: Assign permission sets, etc.
+   *
+   * @author Raphael Krausz
+   * @date   2018-05-19
+   * @param  numberOfUsers the number of Users to create
+   * @return a List<User> with the created users
    */
+  public static List<User> createTestUsers(Integer numberOfUsers) {
+    if (numberOfUsers <= 0) return new List<User>();
+
+    // Create the users
+    Id standardPlatformUserProfileId = [SELECT Id FROM Profile WHERE Name = 'Standard Platform User'].Id;
+
+    List<User> users = new List<User>();
+    for(Integer i = 1; i <= numberOfUsers; i++) {
+      User u = new User(ProfileId = standardPlatformUserProfileId,
+                        LastName = 'TestUser' + i,
+                        Email = 'timetracker' + i + '@blackthorn.com',
+                        Username = 'timetracker' + i + '@blackthorn.com',
+                        Alias = 'tu' + i,
+                        TimeZoneSidKey = 'America/Los_Angeles',
+                        LocaleSidKey = 'en_US',
+                        EmailEncodingKey = 'UTF-8',
+                        LanguageLocaleKey = 'en_US'
+                        );
+      users.add(u);
+    }
+
+    insert users;
+
+    // Assign them to the TimeTracker Permission set
+    Id permissionSetId = [
+    SELECT Id FROM PermissionSet WHERE Name = 'TimeTracker_User_Permission_Set'
+    ].Id;
+
+    List<PermissionSetAssignment> psaList = new List<PermissionSetAssignment>();
+    for (User u : users) {
+      PermissionSetAssignment psa = new PermissionSetAssignment
+      (PermissionSetId = permissionSetId,
+       AssigneeId = u.Id);
+      psaList.add(psa);
+    }
+
+    insert psaList;
+
+    return users;
+  }
+
 
   // TODO: Should this be moved to ProjectsTestDataFactory?
 
@@ -26,6 +74,7 @@ public class TimeEntriesTestDataFactory {
    * and an empty list of projects is returned.
    *
    * @author Raphael Krausz
+   * @date   2018-05-19
    * @param  numberOfProjects the number of projects to create
    * @param  isBillable true means the project should be billed
    * @param  billBy must be one of: 'Project', 'Tasks', 'People', 'none'

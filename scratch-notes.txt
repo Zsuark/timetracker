@@ -252,3 +252,10 @@ FROM Project__c
 TESTING NOTES
 
 We make 1 client per project
+
+Client naming convention:
+Project naming convention:
+
+User naming conventions:
+
+'timetracker\%@blackthorn.com'

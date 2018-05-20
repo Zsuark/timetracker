@@ -4,14 +4,57 @@ private class TimeEntriesTest {
   /*
   What do we need for testing?
 
-  A test user who is a normal user of the application (not a PM)
-  A test user who is a system administrator
-  A test use who is a project manager on a project
+  Test users
+  ? A test user who is a normal user of the application (not a PM)
+  ? A test user who is a system administrator
+  ? A test use who is a project manager on a project
 
   Client(s), Project(s), Task(s).
 
   */
 
+  @isTest static void testUserCreation() {
+    // Create users
+    List<User> userList = TimeEntriesTestDataFactory.createTestUsers(2);
+
+    // Grab them from the database
+    List<User> dbUserList = [
+    SELECT Id, Profile.Name, LastName, IsActive
+    FROM User
+    WHERE Email LIKE 'timetracker%@blackthorn.com'
+    AND Profile.Name = 'Standard Platform User'
+    AND IsActive = true
+    ORDER BY LastName
+    ];
+
+    // Check they are as expected
+    System.assertEquals(2, userList.size());
+    System.assertEquals(2, dbUserList.size());
+    System.assertEquals('TestUser1', dbUserList[0].LastName);
+    System.assertEquals('TestUser2', dbUserList[1].LastName);
+
+
+    // Check they are assigned to the Time Tracker permission set
+    Map<Id, User> userIdMap = new Map<Id, User>(dbUserList);
+    Set<Id> userIdSet = userIdMap.keySet();
+
+    List<PermissionSetAssignment> psaList = [
+      SELECT Id, PermissionSet.Name, AssigneeId
+      FROM PermissionSetAssignment
+      WHERE AssigneeId IN :userIdSet
+      AND PermissionSet.Name = 'TimeTracker_User_Permission_Set'
+    ];
+
+    System.assertEquals(2, psaList.size());
+    for (PermissionSetAssignment psa : psaList) {
+      System.assertEquals('TimeTracker_User_Permission_Set', psa.PermissionSet.Name);
+      System.assert(userIdSet.contains(psa.AssigneeId));
+    }
+
+
+
+
+  }
 
   /**
    * Checking that our test data factory is working correctly for Projects
