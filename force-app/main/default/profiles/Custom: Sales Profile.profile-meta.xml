@@ -6,11 +6,27 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>ProjectUserAssignments</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ProjectUserAssignmentsSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Time_Entries</apexClass>
+        <apexClass>ProjectsSelector</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TimeEntries</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TimeEntriesTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TimeEntriesTestDataFactory</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -282,6 +298,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Project_User_Assignment__c.Budget__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Project_User_Assignment__c.Concatenated_Name__c</field>
         <readable>true</readable>
@@ -319,11 +340,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Project_User_Assignment__c.User__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Bill_by__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -399,11 +415,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Project__c.Over_Budget_Notification_Percentage__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Project__c.Project_Budget_By_Methods__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -557,14 +568,6 @@
     <layoutAssignments>
         <layout>Time_Tracker_Task__c-Time Tracker Task Layout</layout>
     </layoutAssignments>
-    <tabVisibilities>
-        <tab>Project_Task_Assignment__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>Project_User_Assignment__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
