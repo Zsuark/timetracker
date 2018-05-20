@@ -36,27 +36,15 @@ private class ProjectUserAssignmentsTest {
     Project__c testProject = TimeEntriesTestDataFactory.createProjectsAndClients(1)[0];
     Test.stopTest();
 
-    System.debug('+++-- C.2 --+++');
-    System.debug('testProject.Id: ' + testProject.Id);
-
     System.assertNotEquals(null, testUser.Id);
     System.assertNotEquals(null, testProject.Id);
-
-    System.debug('testUser.Id:' + testUser.Id);
-    System.debug('testProject.Id: ' + testProject.Id);
-
-
-    System.debug('+++-- E --+++');
-
 
     // Assign the user to the project, expect success
     Project_User_Assignment__c testAssignment =
     new Project_User_Assignment__c(Project__c = testProject.Id,
                                    User__c    = testUser.Id);
 
-    System.debug('+++-- F --+++');
-
-
+    Test.startTest();
     try {
       insert testAssignment;
     } catch (Exception e) {
@@ -67,11 +55,7 @@ private class ProjectUserAssignmentsTest {
       System.debug('Exception caught: ' + e);
       return;
     }
-
-    System.debug('+++-- G --+++');
-
-    System.debug('**** testAssignment.Name: ' + testAssignment.Name);
-    System.debug('**** testAssignment: ' + testAssignment);
+    Test.stopTest();
 
     // Expect the defaults are correctly set
     System.assert(testAssignment.Is_Active__c, 'Assignment not active');
