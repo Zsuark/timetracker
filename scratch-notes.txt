@@ -267,3 +267,13 @@ User naming conventions:
 NOTE FOR REVIEW:
 
 When reviewing software look at Harvest's "Create a X" (where X is the model from the API) - 1. to ensure that all required fields are met; and 2. the optional fields should exist on the objects too.
+
+
+====
+
+NOTE: User Project Assignments vs Project User Assignments
+
+Both of these domain models appear to be a different perspective of the same base data.
+
+Currently, I am modeling only the Project User Assignments, not the other way around. Both of these Harvest models can be fulfilled with a single SalesForce Object and Domain layer.
+
