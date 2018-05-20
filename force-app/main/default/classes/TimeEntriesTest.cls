@@ -26,7 +26,9 @@ private class TimeEntriesTest {
    */
   @isTest static void testUserCreation() {
     // Create users
+    Test.startTest();
     List<User> userList = TimeEntriesTestDataFactory.createTestUsers(2);
+    Test.stopTest();
 
     // Grab them from the database
     List<User> dbUserList = [
