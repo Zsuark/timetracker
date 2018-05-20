@@ -259,3 +259,11 @@ Project naming convention:
 User naming conventions:
 
 'timetracker\%@blackthorn.com'
+
+
+=====
+
+
+NOTE FOR REVIEW:
+
+When reviewing software look at Harvest's "Create a X" (where X is the model from the API) - 1. to ensure that all required fields are met; and 2. the optional fields should exist on the objects too.
