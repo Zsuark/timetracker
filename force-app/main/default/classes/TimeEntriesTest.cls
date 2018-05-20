@@ -1,3 +1,11 @@
+/**
+ * TimeEntriesTest contains the tests for the domain layer
+ * of the
+ *
+ * @author Raphael Krausz
+ * @date   2018-05-19
+ */
+
 @isTest
 private class TimeEntriesTest {
 
@@ -10,9 +18,13 @@ private class TimeEntriesTest {
   ? A test use who is a project manager on a project
 
   Client(s), Project(s), Task(s).
-
   */
 
+  /**
+   * Tests the creation of standard users for testing
+   * and that they have the Time Tracker (this application) permission
+   * set applied
+   */
   @isTest static void testUserCreation() {
     // Create users
     List<User> userList = TimeEntriesTestDataFactory.createTestUsers(2);
@@ -79,7 +91,6 @@ private class TimeEntriesTest {
 
   }
 
-}
 
 
 
@@ -116,3 +127,5 @@ private class TimeEntriesTest {
    *
    *
    */
+
+}
