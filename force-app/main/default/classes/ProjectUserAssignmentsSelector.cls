@@ -5,25 +5,25 @@
 */
 
 public class ProjectUserAssignmentsSelector extends fflib_SObjectSelector {
-  // public ProjectUserAssignmentsSelector() {
-  //   super(false);
-  // }
+  public ProjectUserAssignmentsSelector() {
+    super(false);
+  }
 
 
 
-  // public List<Schema.SObjectField> getSObjectFieldList() {
-  //   return new List<Schema.SObjectField> {
-  //     Project_User_Assignment__c.Id,
-  //     Project_User_Assignment__c.Name,
-  //     Project_User_Assignment__c.Is_Active__c,
-  //     Project_User_Assignment__c.Project__c,
-  //     Project_User_Assignment__c.User__c
-  //   };
-  // }
+  public List<Schema.SObjectField> getSObjectFieldList() {
+    return new List<Schema.SObjectField> {
+      Project_User_Assignment__c.Id,
+      Project_User_Assignment__c.Name,
+      Project_User_Assignment__c.Is_Active__c,
+      Project_User_Assignment__c.Project__c,
+      Project_User_Assignment__c.User__c
+    };
+  }
 
-  // public Schema.SObjectType getSObjectType() {
-  //   return Project_User_Assignment__c.sObjectType;
-  // }
+  public Schema.SObjectType getSObjectType() {
+    return Project_User_Assignment__c.sObjectType;
+  }
 
 
 

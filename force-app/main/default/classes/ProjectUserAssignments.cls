@@ -9,15 +9,15 @@
  */
 public class ProjectUserAssignments extends fflib_SObjectDomain {
 
-  // public ProjectUserAssignments(List<Project_User_Assignment__c> sObjectList) {
-  //   super(sObjectList);
-  // }
+  public ProjectUserAssignments(List<Project_User_Assignment__c> sObjectList) {
+    super(sObjectList);
+  }
 
-  // public class Constructor implements fflib_SObjectDomain.IConstructable {
-  //   public fflib_SObjectDomain construct(List<SObject> sObjectList) {
-  //     return new ProjectUserAssignments(sObjectList);
-  //   }
-  // }
+  public class Constructor implements fflib_SObjectDomain.IConstructable {
+    public fflib_SObjectDomain construct(List<SObject> sObjectList) {
+      return new ProjectUserAssignments(sObjectList);
+    }
+  }
 
   // /**
   //  * Apply Defaults to Project User Assignments

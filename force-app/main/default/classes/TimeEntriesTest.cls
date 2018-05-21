@@ -12,6 +12,8 @@ private class TimeEntriesTest {
   // Needed items: TimeEntries, Tasks, Projects... ? Timers?
 
   // Are time entries and timers different???
+  // Maybe a time entry is the timers for a given day for a
+  // project/task/user given combination
 
   // 2. As a user, I can start a timer
   // 3. As a user, I can pause the timer
