@@ -14,6 +14,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ProjectUserAssignmentsTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ProjectsSelector</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -547,6 +551,11 @@
         <field>Time_Tracker_Task__c.Is_Default__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Timer__c.Stop__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account %28Support%29 Layout</layout>
     </layoutAssignments>
@@ -567,6 +576,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Time_Tracker_Task__c-Time Tracker Task Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Timer__c-Timer Layout</layout>
     </layoutAssignments>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
