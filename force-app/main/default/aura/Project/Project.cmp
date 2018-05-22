@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable" >
+	<!-- header
+	- project name
+	- client name
+	- user name
+	- maybe more here later -->
+    <c:projectHeader />
+    <c:timeEntryList />
+    
+    
+    <!-- body
+	- List of tasks
+	- Tasks have buttons with which to start or resume timers
+	- starting a new timer will stop/pause any other running timers
+	-->
+</aura:component>

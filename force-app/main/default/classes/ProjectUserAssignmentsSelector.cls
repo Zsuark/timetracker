@@ -26,6 +26,24 @@ public class ProjectUserAssignmentsSelector extends fflib_SObjectSelector {
   }
 
 
+  /**
+   * Given a user Id, return the active assignments for that user
+   */
+  public List<Project_User_Assignment__c>
+  selectByUserId(Set<Id> userIdSet) {
+    if (userIdSet == null || userIdSet.isEmpty()) {
+      // We should either return an empty list,
+      // null or raise an error (exception)
+      return new List<Project_User_Assignment__c>();
+    }
+
+    return (List<Project_User_Assignment__c>)
+    Database.query(newQueryFactory().
+                   setCondition('User__c IN :userIdSet').
+                   setCondition('Is_Active__c = true').
+                   toSOQL());
+  }
+
 
   // /**
   //  * Given a list of project Ids and a list of corresponding user Ids

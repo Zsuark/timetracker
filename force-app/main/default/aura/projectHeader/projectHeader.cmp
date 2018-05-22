@@ -1,0 +1,23 @@
+<aura:component controller="ProjectListController">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="projects" type="Project__c[]"/>
+
+
+    <!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem >
+            <lightning:icon iconName="custom:custom15" alternativeText="Project"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem >
+            <lightning:verticalNavigation>
+                <lightning:verticalNavigationSection
+                    label="Project choice:">
+                    <aura:iteration items="{!v.projects}" var="project">
+                        <lightning:verticalNavigationItem label="{! project.Name }" name="{! project.Code__c }" />
+                    </aura:iteration>
+                </lightning:verticalNavigationSection>
+            </lightning:verticalNavigation>
+        </lightning:layoutItem>
+</lightning:layout>
+<!-- / PAGE HEADER -->
+</aura:component>
